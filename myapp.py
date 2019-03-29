@@ -15,7 +15,7 @@ def profile(name):
     rows = session.execute( """Select * From ftball.stats where home_team = '{}'""".format(name))
     for ftball in rows: 
         return('<h1>{} gains {} results(H for win, D for lose, A for draw), thanks for using .</h1>'.format(name,ftball.result))
-    
+
     return('<h1>That team does not exist!</h1>')
 
 if __name__ == '__main__': 
